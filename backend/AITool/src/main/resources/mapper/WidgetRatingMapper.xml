@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mybatis的dtd文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace属性： 用于指定指向那个接口 -->
+<mapper namespace="org.amm.dao.WidgetRatingMapper">
+
+    <insert id="insertWidgetRating" parameterType="WidgetRating">
+		<![CDATA[
+        insert into widget_ratings(widget_id,user_id,dimension1,dimension2,dimension3) values(#{widgetId},#{userId},#{dimension1},#{dimension2},#{dimension3})
+        ]]>
+	</insert>
+
+	<!--计算某天距今天的平均ranting-->
+	<select id="calAvgRating" parameterType="map" resultType="map">
+		<![CDATA[
+		SELECT
+			AVG(CAST(dimension1 AS DOUBLE)) AS avgDimension1,
+			AVG(CAST(dimension2 AS DOUBLE)) AS avgDimension2,
+			AVG(CAST(dimension3 AS DOUBLE)) AS avgDimension3
+		FROM widget_ratings
+		WHERE widget_id = #{widgetId}
+		  AND rating_date >= DATE_SUB(CURDATE(), INTERVAL #{day} DAY)
+		  AND rating_date < CURDATE() + INTERVAL 1 DAY;
+		]]>
+	</select>
+</mapper>

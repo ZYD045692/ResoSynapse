@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mybatis的dtd文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace属性： 用于指定指向那个接口 -->
+<mapper namespace="org.amm.dao.ModuleWidgetMapper">
+    <!-- 查询所有可见小组件-->
+    <select id="getVisibleModuleWidget" resultType="ModuleWidget">
+		<![CDATA[
+        select * from module_widgets where is_visible=1
+        ]]>
+	</select>
+    <!-- 修改模块顺序 -->
+    <update id="updateModuleOrder" parameterType="map">
+		<![CDATA[
+        update module_widgets set display_order=#{displayOrder}, father_id=#{fatherId} where id=#{id}
+        ]]>
+	</update>
+    <!-- 模块添加-->
+    <insert id="insertModuleWidget" parameterType="ModuleWidget">
+		<![CDATA[
+        insert into module_widgets(name,icon_url,display_order, is_visible, introduction, father_id, url) values(#{name},#{iconUrl},#{displayOrder},#{isVisible},#{introduction},#{fatherId},#{url})
+        ]]>
+	</insert>
+	<!-- 修改模块信息 -->
+	<update id="updateModuleInfo" parameterType="ModuleWidget">
+	<![CDATA[
+        update module_widgets
+        set name=#{name},
+            url=#{url},
+            icon_url=#{iconUrl},
+            is_visible=#{isVisible},
+			father_id=#{fatherId},
+			introduction=#{introduction}
+        where id=#{id}
+        ]]>
+	</update>
+</mapper>

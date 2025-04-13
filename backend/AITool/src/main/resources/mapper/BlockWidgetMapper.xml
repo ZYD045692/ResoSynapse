@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mybatis的dtd文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace属性： 用于指定指向那个接口 -->
+<mapper namespace="org.amm.dao.BlockWidgetMapper">
+    <!-- 查询所有大组件及其小组件的关系 (给管理员）-->
+    <resultMap type="BlockWidgetAdminDTO" id="AdminWidgetMap">
+        <result property="id" column="b_id"/>
+        <result property="name" column="b_name"/>
+        <result property="iconUrl" column="b_icon_url"/>
+        <result property="displayOrder" column="b_display_order"/>
+        <result property="isVisible" column="b_is_visible"/>
+        <result property="imgUrl" column="img_url"/>
+        <result property="introduction" column="b_introduction"/>
+        <collection property="moduleWidgetAdminDTOs" ofType="org.amm.model.dto.ModuleWidgetAdminDTO">
+            <result property="id" column="m_id"/>
+            <result property="name" column="m_name"/>
+            <result property="url" column="m_url"/>
+            <result property="iconUrl" column="m_icon_url"/>
+            <result property="displayOrder" column="m_display_order"/>
+            <result property="isVisible" column="m_is_visible"/>
+            <result property="fatherId" column="father_id" />
+            <result property="introduction" column="m_introduction"/>
+        </collection>
+    </resultMap>
+
+    <!-- 给管理员 -->
+    <select id="getAdminWidgetMap" resultMap="AdminWidgetMap">
+        <![CDATA[
+        SELECT
+            b.display_order AS b_display_order,
+            b.id AS b_id,
+            b.name AS b_name,
+            b.icon_url AS b_icon_url,
+            b.is_visible as b_is_visible,
+            b.img_url,
+            b.introduction as b_introduction,
+            m.display_order AS m_display_order,
+            m.id AS m_id,
+            m.name AS m_name,
+            m.url AS m_url,
+            m.icon_url AS m_icon_url,
+            m.is_visible AS m_is_visible,
+            m.father_id,
+            m.introduction as m_introduction
+        FROM block_widgets b
+                 LEFT JOIN module_widgets m ON m.father_id = b.id
+        ORDER BY  b.display_order,b.is_visible DESC,m.display_order,m.is_visible DESC;
+        ]]>
+    </select>
+
+    <!-- 查询所有可见大组件及其小组件的关系 (给用户）-->
+    <resultMap type="BlockWidgetUserDTO" id="UserWidgetMap">
+        <result property="id" column="b_id"/>
+        <result property="name" column="b_name"/>
+        <result property="iconUrl" column="b_icon_url"/>
+        <result property="displayOrder" column="b_display_order"/>
+        <result property="isVisible" column="b_is_visible"/>
+        <collection property="moduleWidgetUserDTOs" ofType="org.amm.model.dto.ModuleWidgetUserDTO">
+            <result property="id" column="m_id"/>
+            <result property="name" column="m_name"/>
+            <result property="url" column="m_url"/>
+            <result property="iconUrl" column="m_icon_url"/>
+            <result property="displayOrder" column="m_display_order"/>
+            <result property="isVisible" column="m_is_visible"/>
+            <result property="fatherId" column="father_id" />
+        </collection>
+    </resultMap>
+
+    <!-- 给用户 -->
+    <select id="getUserWidgetMap" resultMap="UserWidgetMap">
+        <![CDATA[
+        SELECT
+            b.display_order AS b_display_order,
+            b.id AS b_id,
+            b.name AS b_name,
+            b.icon_url AS b_icon_url,
+            b.is_visible as b_is_visible,
+            m.display_order AS m_display_order,
+            m.id AS m_id,
+            m.name AS m_name,
+            m.url AS m_url,
+            m.icon_url AS m_icon_url,
+            m.is_visible AS m_is_visible,
+            m.father_id
+        FROM block_widgets b
+                 LEFT JOIN module_widgets m ON m.father_id = b.id AND m.is_visible = 1
+        WHERE b.is_visible=1
+        ORDER BY b.display_order, m.display_order;
+        ]]>
+    </select>
+
+    <!-- 修改板块顺序 -->
+    <update id="updateBlockOrder" parameterType="map">
+		<![CDATA[
+        update block_widgets set display_order=#{displayOrder} where id=#{id}
+        ]]>
+	</update>
+
+    <!-- 板块添加-->
+    <insert id="insertBlockWidget" parameterType="BlockWidget">
+		<![CDATA[
+        insert into block_widgets(name,icon_url,display_order, is_visible, img_url, introduction) values(#{name},#{iconUrl},#{displayOrder},#{isVisible},#{imgUrl},#{introduction})
+        ]]>
+	</insert>
+
+    <!-- 修改板块信息 -->
+    <update id="updateBlockInfo" parameterType="BlockWidget">
+		<![CDATA[
+        update block_widgets
+        set name=#{name},
+            icon_url=#{iconUrl},
+            is_visible=#{isVisible},
+            img_url=#{imgUrl},
+            introduction=#{introduction}
+        where id=#{id}
+        ]]>
+	</update>
+
+
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mybatis的dtd文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace属性： 用于指定指向那个接口 -->
+<mapper namespace="org.amm.dao.WidgetUsageLogMapper">
+    <!-- 插入使用日志-->
+    <insert id="insertWidgetUsageLog" parameterType="WidgetUsageLog">
+		<![CDATA[
+        insert into widget_usage_logs(widget_id,user_id) values(#{widgetId},#{userId})
+        ]]>
+	</insert>
+
+    <!-- 计算某天距今天的点击次数-->
+    <select id="calClickCount" parameterType="map" resultType="int">
+		<![CDATA[
+        SELECT COUNT(*)
+        FROM widget_usage_logs
+        WHERE widget_id = #{widgetId}
+          AND log_date >= DATE_SUB(CURDATE(), INTERVAL #{day} DAY)
+          AND log_date < CURDATE() + INTERVAL 1 DAY;
+        ]]>
+	</select>
+
+</mapper>

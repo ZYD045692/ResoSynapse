@@ -1,0 +1,139 @@
+22-Mar-2025 14:26:02.121 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/9.0.102
+22-Mar-2025 14:26:02.125 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Mar 3 2025 19:33:14 UTC
+22-Mar-2025 14:26:02.125 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      9.0.102.0
+22-Mar-2025 14:26:02.125 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 11
+22-Mar-2025 14:26:02.126 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+22-Mar-2025 14:26:02.126 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+22-Mar-2025 14:26:02.126 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Users\Surperman\.jdks\openjdk-23.0.1
+22-Mar-2025 14:26:02.126 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    23.0.1+11-39
+22-Mar-2025 14:26:02.126 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+22-Mar-2025 14:26:02.126 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     C:\Users\Surperman\Desktop\AITool(4)\AITool
+22-Mar-2025 14:26:02.126 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-9.0.102
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.io=ALL-UNNAMED
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.util=ALL-UNNAMED
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=D:\apache-tomcat-9.0.102
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=C:\Users\Surperman\Desktop\AITool(4)\AITool
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=C:\Users\Surperman\Desktop\AITool(4)\AITool\temp
+22-Mar-2025 14:26:02.133 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\logging.properties
+22-Mar-2025 14:26:02.134 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Mar-2025 14:26:02.134 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -javaagent:D:\IntelliJ IDEA 2024.2.3\lib\idea_rt.jar=54937:D:\IntelliJ IDEA 2024.2.3\bin
+22-Mar-2025 14:26:02.134 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dfile.encoding=UTF-8
+22-Mar-2025 14:26:02.134 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dsun.stdout.encoding=UTF-8
+22-Mar-2025 14:26:02.136 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dsun.stderr.encoding=UTF-8
+22-Mar-2025 14:26:02.151 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Users\Surperman\.jdks\openjdk-23.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\cursor\resources\app\bin;C:\Program Files (x86)\Microsoft\Edge\Application;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32\Wbem;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Qt\Qt5.12.0\5.12.0\mingw73_64\bin;C:\Program Files\Tesseract-OCR;C:\Program Files\Java\jdk-11\bin;C:\Git\cmd;C:\Program Files\Git\cmd;D:\Program;D:\GCMSsolution\Program;D:\Program Files\Git LFS;C:\Git\bin\Git LFS;D:\Git\cmd;D:\apache-tomcat-9.0.96\bin;C:\Program Files\Java\jdk-11\bin;D:\;D:\NodeJs\nodejs;C:\Users\Surperman\AppData\Local\pnpm;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin\\..\extras\CUPTI\lib64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32\Wbem;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Qt\Qt5.12.0\5.12.0\mingw73_64\bin;C:\Program Files\Tesseract-OCR;C:\Program Files\Java\jdk-11\bin;C:\Git\cmd;C:\Program Files\Git\cmd;D:\Program;D:\GCMSsolution\Program;D:\Program Files\Git LFS;C:\Git\bin\Git LFS;D:\Git\cmd;D:\apache-tomcat-9.0.96\bin;C:\Program Files\Java\jdk-11\bin;D:\Maven\apache-maven-3.9.9\bin;C:\Users\Surperman\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Surperman\AppData\Local\Programs\Ollama;D:\NodeJs\nodejs\node_global;D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;D:\anaconda3\Library\usr\bin;D:\anaconda3\Library\bin;D:\anaconda3\Scripts;C:\Users\Surperman\.pnpm-global\bin;D:\WebStorm 2024.3.5\bin;;D:\cursor\resources\app\bin;D:\NodeJs;;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+22-Mar-2025 14:26:02.401 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+22-Mar-2025 14:26:02.415 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[469]毫秒内初始化
+22-Mar-2025 14:26:02.457 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+22-Mar-2025 14:26:02.457 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.102]
+22-Mar-2025 14:26:02.465 信息 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 正在部署部署描述符[C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\Catalina\localhost\AITool.xml]。
+22-Mar-2025 14:26:04.325 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+22-Mar-2025 14:26:07.162 信息 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\Catalina\localhost\AITool.xml]的部署已在[4,695]ms内完成
+22-Mar-2025 14:26:07.165 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+22-Mar-2025 14:26:07.181 信息 [main] org.apache.catalina.startup.Catalina.start [4764]毫秒后服务器启动
+22-Mar-2025 14:51:46.619 信息 [Thread-1] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+22-Mar-2025 14:51:46.639 信息 [Thread-1] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+22-Mar-2025 14:51:46.742 警告 [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc Web应用程序 [AITool] 注册了JDBC驱动程序 [com.alibaba.druid.proxy.DruidDriver]，但在Web应用程序停止时无法注销它。 为防止内存泄漏，JDBC驱动程序已被强制取消注册。
+22-Mar-2025 14:51:46.742 警告 [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc Web应用程序 [AITool] 注册了JDBC驱动程序 [com.mysql.cj.jdbc.Driver]，但在Web应用程序停止时无法注销它。 为防止内存泄漏，JDBC驱动程序已被强制取消注册。
+22-Mar-2025 14:51:46.744 警告 [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads Web应用程序[AITool]似乎启动了一个名为[mysql-cj-abandoned-connection-cleanup]的线程，但未能停止它。这很可能会造成内存泄漏。线程的堆栈跟踪：[
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)]
+22-Mar-2025 14:51:46.781 信息 [Thread-1] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+22-Mar-2025 14:51:46.790 信息 [Thread-1] org.apache.coyote.AbstractProtocol.destroy 正在销毁协议处理器 ["http-nio-8080"]
+22-Mar-2025 14:51:49.792 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/9.0.102
+22-Mar-2025 14:51:49.794 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Mar 3 2025 19:33:14 UTC
+22-Mar-2025 14:51:49.794 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      9.0.102.0
+22-Mar-2025 14:51:49.794 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 11
+22-Mar-2025 14:51:49.794 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+22-Mar-2025 14:51:49.796 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+22-Mar-2025 14:51:49.796 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Users\Surperman\.jdks\openjdk-23.0.1
+22-Mar-2025 14:51:49.796 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    23.0.1+11-39
+22-Mar-2025 14:51:49.796 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+22-Mar-2025 14:51:49.796 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     C:\Users\Surperman\Desktop\AITool(4)\AITool
+22-Mar-2025 14:51:49.796 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-9.0.102
+22-Mar-2025 14:51:49.803 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Mar-2025 14:51:49.803 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.io=ALL-UNNAMED
+22-Mar-2025 14:51:49.803 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.util=ALL-UNNAMED
+22-Mar-2025 14:51:49.803 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+22-Mar-2025 14:51:49.803 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Mar-2025 14:51:49.803 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=D:\apache-tomcat-9.0.102
+22-Mar-2025 14:51:49.804 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=C:\Users\Surperman\Desktop\AITool(4)\AITool
+22-Mar-2025 14:51:49.804 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=C:\Users\Surperman\Desktop\AITool(4)\AITool\temp
+22-Mar-2025 14:51:49.804 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\logging.properties
+22-Mar-2025 14:51:49.804 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Mar-2025 14:51:49.804 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -javaagent:D:\IntelliJ IDEA 2024.2.3\lib\idea_rt.jar=63426:D:\IntelliJ IDEA 2024.2.3\bin
+22-Mar-2025 14:51:49.804 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dfile.encoding=UTF-8
+22-Mar-2025 14:51:49.804 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dsun.stdout.encoding=UTF-8
+22-Mar-2025 14:51:49.804 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dsun.stderr.encoding=UTF-8
+22-Mar-2025 14:51:49.826 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Users\Surperman\.jdks\openjdk-23.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\cursor\resources\app\bin;C:\Program Files (x86)\Microsoft\Edge\Application;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32\Wbem;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Qt\Qt5.12.0\5.12.0\mingw73_64\bin;C:\Program Files\Tesseract-OCR;C:\Program Files\Java\jdk-11\bin;C:\Git\cmd;C:\Program Files\Git\cmd;D:\Program;D:\GCMSsolution\Program;D:\Program Files\Git LFS;C:\Git\bin\Git LFS;D:\Git\cmd;D:\apache-tomcat-9.0.96\bin;C:\Program Files\Java\jdk-11\bin;D:\;D:\NodeJs\nodejs;C:\Users\Surperman\AppData\Local\pnpm;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin\\..\extras\CUPTI\lib64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32\Wbem;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Qt\Qt5.12.0\5.12.0\mingw73_64\bin;C:\Program Files\Tesseract-OCR;C:\Program Files\Java\jdk-11\bin;C:\Git\cmd;C:\Program Files\Git\cmd;D:\Program;D:\GCMSsolution\Program;D:\Program Files\Git LFS;C:\Git\bin\Git LFS;D:\Git\cmd;D:\apache-tomcat-9.0.96\bin;C:\Program Files\Java\jdk-11\bin;D:\Maven\apache-maven-3.9.9\bin;C:\Users\Surperman\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Surperman\AppData\Local\Programs\Ollama;D:\NodeJs\nodejs\node_global;D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;D:\anaconda3\Library\usr\bin;D:\anaconda3\Library\bin;D:\anaconda3\Scripts;C:\Users\Surperman\.pnpm-global\bin;D:\WebStorm 2024.3.5\bin;;D:\cursor\resources\app\bin;D:\NodeJs;;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+22-Mar-2025 14:51:50.140 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+22-Mar-2025 14:51:50.153 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[601]毫秒内初始化
+22-Mar-2025 14:51:50.194 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+22-Mar-2025 14:51:50.194 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.102]
+22-Mar-2025 14:51:50.204 信息 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 正在部署部署描述符[C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\Catalina\localhost\AITool.xml]。
+22-Mar-2025 14:51:52.654 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+22-Mar-2025 14:51:56.452 信息 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\Catalina\localhost\AITool.xml]的部署已在[6,245]ms内完成
+22-Mar-2025 14:51:56.456 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+22-Mar-2025 14:51:56.474 信息 [main] org.apache.catalina.startup.Catalina.start [6318]毫秒后服务器启动
+22-Mar-2025 15:07:49.823 信息 [Thread-1] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+22-Mar-2025 15:07:49.834 信息 [Thread-1] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+22-Mar-2025 15:07:49.911 警告 [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc Web应用程序 [AITool] 注册了JDBC驱动程序 [com.alibaba.druid.proxy.DruidDriver]，但在Web应用程序停止时无法注销它。 为防止内存泄漏，JDBC驱动程序已被强制取消注册。
+22-Mar-2025 15:07:49.912 警告 [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc Web应用程序 [AITool] 注册了JDBC驱动程序 [com.mysql.cj.jdbc.Driver]，但在Web应用程序停止时无法注销它。 为防止内存泄漏，JDBC驱动程序已被强制取消注册。
+22-Mar-2025 15:07:49.913 警告 [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads Web应用程序[AITool]似乎启动了一个名为[mysql-cj-abandoned-connection-cleanup]的线程，但未能停止它。这很可能会造成内存泄漏。线程的堆栈跟踪：[
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)]
+22-Mar-2025 15:07:49.922 信息 [Thread-1] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+22-Mar-2025 15:07:49.931 信息 [Thread-1] org.apache.coyote.AbstractProtocol.destroy 正在销毁协议处理器 ["http-nio-8080"]
+22-Mar-2025 15:07:52.692 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/9.0.102
+22-Mar-2025 15:07:52.695 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Mar 3 2025 19:33:14 UTC
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      9.0.102.0
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 11
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Users\Surperman\.jdks\openjdk-23.0.1
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    23.0.1+11-39
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     C:\Users\Surperman\Desktop\AITool(4)\AITool
+22-Mar-2025 15:07:52.696 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-9.0.102
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.io=ALL-UNNAMED
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.util=ALL-UNNAMED
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=D:\apache-tomcat-9.0.102
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=C:\Users\Surperman\Desktop\AITool(4)\AITool
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=C:\Users\Surperman\Desktop\AITool(4)\AITool\temp
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\logging.properties
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -javaagent:D:\IntelliJ IDEA 2024.2.3\lib\idea_rt.jar=51150:D:\IntelliJ IDEA 2024.2.3\bin
+22-Mar-2025 15:07:52.705 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dfile.encoding=UTF-8
+22-Mar-2025 15:07:52.706 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dsun.stdout.encoding=UTF-8
+22-Mar-2025 15:07:52.706 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dsun.stderr.encoding=UTF-8
+22-Mar-2025 15:07:52.724 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Users\Surperman\.jdks\openjdk-23.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\cursor\resources\app\bin;C:\Program Files (x86)\Microsoft\Edge\Application;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32\Wbem;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Qt\Qt5.12.0\5.12.0\mingw73_64\bin;C:\Program Files\Tesseract-OCR;C:\Program Files\Java\jdk-11\bin;C:\Git\cmd;C:\Program Files\Git\cmd;D:\Program;D:\GCMSsolution\Program;D:\Program Files\Git LFS;C:\Git\bin\Git LFS;D:\Git\cmd;D:\apache-tomcat-9.0.96\bin;C:\Program Files\Java\jdk-11\bin;D:\;D:\NodeJs\nodejs;C:\Users\Surperman\AppData\Local\pnpm;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin\\..\extras\CUPTI\lib64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32\Wbem;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Qt\Qt5.12.0\5.12.0\mingw73_64\bin;C:\Program Files\Tesseract-OCR;C:\Program Files\Java\jdk-11\bin;C:\Git\cmd;C:\Program Files\Git\cmd;D:\Program;D:\GCMSsolution\Program;D:\Program Files\Git LFS;C:\Git\bin\Git LFS;D:\Git\cmd;D:\apache-tomcat-9.0.96\bin;C:\Program Files\Java\jdk-11\bin;D:\Maven\apache-maven-3.9.9\bin;C:\Users\Surperman\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Surperman\AppData\Local\Programs\Ollama;D:\NodeJs\nodejs\node_global;D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;D:\anaconda3\Library\usr\bin;D:\anaconda3\Library\bin;D:\anaconda3\Scripts;C:\Users\Surperman\.pnpm-global\bin;D:\WebStorm 2024.3.5\bin;;D:\cursor\resources\app\bin;D:\NodeJs;;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+22-Mar-2025 15:07:53.007 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+22-Mar-2025 15:07:53.023 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[520]毫秒内初始化
+22-Mar-2025 15:07:53.068 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+22-Mar-2025 15:07:53.068 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.102]
+22-Mar-2025 15:07:53.075 信息 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 正在部署部署描述符[C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\Catalina\localhost\AITool.xml]。
+22-Mar-2025 15:07:55.178 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+22-Mar-2025 15:07:59.018 信息 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[C:\Users\Surperman\Desktop\AITool(4)\AITool\conf\Catalina\localhost\AITool.xml]的部署已在[5,939]ms内完成
+22-Mar-2025 15:07:59.021 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+22-Mar-2025 15:07:59.039 信息 [main] org.apache.catalina.startup.Catalina.start [6014]毫秒后服务器启动

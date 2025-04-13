@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev  # 或 prod
+
+logging:
+  level:
+    org.springframework.core.env: TRACE  # 打印环境配置加载细节
+    org.springframework.boot.context.config: DEBUG

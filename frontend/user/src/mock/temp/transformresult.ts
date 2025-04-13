@@ -1,0 +1,5 @@
+import {transformTextType} from '@/api/model/transformTextModel';
+export const transformtext:transformTextType = {
+    "texts": "rhetrnibeanhaukean tne Jtongtwnm Besides. many citizens become homeless. We chinese feel retly sorty for the pains you are suferng. And T io hope uou can overcome those great difficulties.,\nPlese remember lapan isnt alone. People all over the vorld are lending hands to the areas struck bu tsunum nd earthquake. Now that the disaster has hoppened ie should foce it bravely and rebuild the homes. thus reating a stronger countiy. Tomorw $\\boldsymbol{\\kappa}$ ancther doy. ll the things will be better\n\n南国海全和江中第会有公有公都中有物业公有司\npeople's  injuries and deaths Besides. imanu citizens become homeless. We chinese tee greatly sorry forthe pains you are suifering, And T do hope uou can overcome those qreat difficuties.\n\\hat{A}\n",
+    "translated": "rhetrnibeanhaukean tne Jtongtwnm此外。许多公民变得无家可归。我们中国人为您所遭受的痛苦感到非常难过。我希望你能克服那些巨大的困难。，\n请记住，拉潘并不孤单。整个世界的人们都在向发生地震的地区伸出援助之手。既然灾难已经过去，ie应该勇敢地去做，重建家园。从而建立一个更强大的国家。Tomorw $ \\ boldsymbol{\\ kappa}$ ancther doy。一切都会好起来的\n\n南国海全和江中第会有公有公都中有物业公有司\n人们的伤亡。伊马努公民无家可归。我们中国人对您所遭受的痛苦深表歉意，希望您能克服这些困难。\n\\ 帽子 {A}"
+}

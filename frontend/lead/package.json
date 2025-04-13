@@ -1,0 +1,38 @@
+{
+  "name": "lead",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "axios": "^1.8.1",
+    "element-plus": "^2.9.7",
+    "js-md5": "^0.8.3",
+    "lead": "file:",
+    "pinia": "^3.0.1",
+    "pixi-live2d-display": "0.4.0",
+    "pixi.js": "^6.5.10",
+    "vite": "^6.2.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "vue3-pixi": "^0.9.6"
+  },
+  "devDependencie": {
+    "@types/pixi.js": "^4.8.9",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vue-tsc": "^2.2.4"
+  },
+  "devDependencies": {
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "^5.8.2",
+    "vue-tsc": "^2.2.8"
+  }
+}

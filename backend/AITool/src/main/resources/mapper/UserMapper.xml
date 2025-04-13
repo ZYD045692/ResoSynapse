@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mybatis的dtd文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace属性： 用于指定指向那个接口 -->
+<mapper namespace="org.amm.dao.UserMapper">
+    <!-- 增 -->
+    <insert id="insertUser" parameterType="user">
+		<![CDATA[
+        insert into users(user_name,password_hash,email) values(#{userName},#{passwordHash},#{email})
+        ]]>
+	</insert>
+    <!-- 修改密码 -->
+    <update id="updatePasswordHash" parameterType="user">
+		<![CDATA[
+        update users set password_hash=#{passwordHash} where user_name=#{userName}
+        ]]>
+	</update>
+	<!-- 修改邮箱 -->
+	<update id="updateEmail" parameterType="user">
+		<![CDATA[
+		update users set email=#{email} where user_name=#{userName}
+		]]>
+	</update>
+	<!-- 注销 -->
+	<delete id="deleteUser" parameterType="user">
+		<![CDATA[
+		delete from users where user_name=#{userName}
+		]]>
+	</delete>
+	<!-- 用户列表 -->
+	<select id="userList" resultType="user">
+		select * from users
+	</select>
+	<!-- 按userId操作 -->
+	<select id="findByUserId" parameterType="user" resultType="user">
+		<![CDATA[
+		select * from users where user_id=#{userId}
+		]]>
+	</select>
+	<!-- 按email操作 -->
+	<select id="findByEmail" parameterType="map" resultType="user">
+		<![CDATA[
+		select * from users where email=#{email}
+		]]>
+	</select>
+	<!-- 按userName操作 -->
+	<select id="findByUserName" parameterType="String" resultType="user">
+		<![CDATA[
+		select * from users where user_name=#{userName}
+		]]>
+	</select>
+</mapper>

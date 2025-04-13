@@ -1,0 +1,36 @@
+{
+  "name": "user",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "axios": "^1.8.3",
+    "element-plus": "^2.9.6",
+    "file-saver": "^2.0.5",
+    "html-to-image": "^1.11.13",
+    "less": "^4.2.2",
+    "markmap-lib": "^0.18.11",
+    "markmap-view": "^0.18.10",
+    "path": "^0.12.7",
+    "pinia": "^3.0.1",
+    "user": "file:",
+    "vue": "^3.5.13",
+    "vue-draggable-plus": "^0.6.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "^22.13.10",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.2",
+    "vue-tsc": "^2.2.4"
+  }
+}

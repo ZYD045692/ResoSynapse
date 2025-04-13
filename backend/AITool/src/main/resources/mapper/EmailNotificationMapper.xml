@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mybatis的dtd文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace属性： 用于指定指向那个接口 -->
+<mapper namespace="org.amm.dao.EmailNotificationMapper">
+    <!-- 查询所有大小组件对应关系-->
+
+    <insert id="insertEmail" parameterType="EmailNotification">
+		<![CDATA[
+        insert into email_notifications(widget_url,block_id,name,icon_url) values(#{widgetUrl},#{blockId},#{name},#{iconUrl})
+        ]]>
+	</insert>
+
+
+</mapper>

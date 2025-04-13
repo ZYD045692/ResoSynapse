@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mybatis的dtd文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace属性： 用于指定指向那个接口 -->
+<mapper namespace="org.amm.dao.HomePageInfoMapper">
+    <!-- 按pageName查询-->
+    <select id="findByPageName" parameterType="String" resultType="HomePageInfo">
+		<![CDATA[
+        select * from home_page_info where page_name=#{pageName}
+        ]]>
+	</select>
+
+    <!-- 修改homePage信息-->
+    <update id="updateHomePageInfo" parameterType="HomePageInfo">
+		<![CDATA[
+        update home_page_info
+        set top_navigation_text1=#{topNavigationText1},
+            top_navigation_text2=#{topNavigationText2},
+            background_url=#{backgroundUrl},
+            apply_url_text=#{applyUrlText},
+            feedback_text=#{feedbackText},
+            dim1=#{dim1},
+            dim2=#{dim2},
+            dim3=#{dim3}
+        where id=#{id}
+        ]]>
+	</update>
+
+</mapper>

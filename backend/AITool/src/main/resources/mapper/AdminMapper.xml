@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mybatis的dtd文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace属性： 用于指定指向那个接口 -->
+<mapper namespace="org.amm.dao.AdminMapper">
+    <!-- 按adminName查询-->
+    <select id="findByAdminName" parameterType="String" resultType="Admin">
+		<![CDATA[
+        select * from admins where admin_name=#{adminName}
+        ]]>
+	</select>
+
+	<!-- 增加管理员 -->
+	<insert id="insertAdmin" parameterType="Admin">
+		<![CDATA[
+		insert into admins(admin_name,admin_password_hash,level) values(#{adminName},#{adminPasswordHash},#{level})
+		]]>
+	</insert>
+
+    <!-- 修改密码 -->
+    <update id="updateAdminPasswordHash" parameterType="Admin">
+		<![CDATA[
+        update admins set admin_password_hash=#{adminPasswordHash} where admin_name=#{adminName}
+        ]]>
+	</update>
+
+    <!-- 注销 -->
+    <delete id="deleteAdmin" parameterType="Admin">
+		<![CDATA[
+        delete from admins where admin_name=#{adminName}
+        ]]>
+	</delete>
+
+</mapper>
