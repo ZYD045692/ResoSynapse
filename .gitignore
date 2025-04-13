@@ -1,2 +1,14 @@
+# 忽略所有以 Test.py 结尾的文件
 **/*Test.py
+
+# 忽略 tools 文件夹及其所有内容
 tools/
+
+# 忽略 documents/PRD.docx 文件
+documents/PRD.docx
+
+# 忽略 backend/Djangobackend/docx/ 文件夹及其所有内容
+backend/Djangobackend/docx/
+
+# 忽略 try/ 文件夹及其所有内容
+**/try/
