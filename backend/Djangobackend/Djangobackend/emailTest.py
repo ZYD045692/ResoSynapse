@@ -15,8 +15,8 @@ def getEmailCaptcha(request):
     # SMTP服务器配置常量
     SMTP_SERVER = "smtp.qq.com"
     SMTP_PORT = 587
-    SENDER_EMAIL = ""
-    SENDER_PASSWORD = ""
+    SENDER_EMAIL = "2214845593@qq.com"
+    SENDER_PASSWORD = "lcwldryyxddqdhgf"
     EMAIL_SUBJECT = "验证码邮件"
     print(dict(request.session))
     try:

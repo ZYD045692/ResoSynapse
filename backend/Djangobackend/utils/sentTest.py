@@ -212,13 +212,15 @@ def send_email(smtp_server, smtp_port, sender_email, sender_password, receiver_e
         return 1
     except Exception as e:
         return 0
+
+
 # 使用函数发送邮件
 if __name__ == "__main__":
     smtp_server = "smtp.qq.com"  # SMTP服务器地址
     smtp_port = 587  # SMTP服务器端口
-    sender_email = ""  # 发件人邮箱
-    sender_password = ""  # 发件人密码或授权码
-    receiver_email = ""  # 收件人邮箱
+    sender_email = "2214845593@qq.com"  # 发件人邮箱
+    sender_password = "lcwldryyxddqdhgf"  # 发件人密码或授权码
+    receiver_email = "2214845593@qq.com"  # 收件人邮箱
     subject = "验证码邮件"  # 邮件主题
     # 生成一个随机的6位数字作为邮件正文
     random_number = random.randint(0, int(1e6))
