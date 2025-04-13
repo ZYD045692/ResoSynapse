@@ -1,5 +1,3 @@
-// const baseUrl1 = "http://115.190.75.15:8080/AITool/";
-// const baseUrl2 = "http://115.190.75.15:8000/";
 const baseUrl1 = "http://localhost:8080/AITool/";
 const baseUrl2 = "http://localhost:8000/";
 

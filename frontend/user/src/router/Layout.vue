@@ -136,7 +136,6 @@ import { useRouter } from 'vue-router';
 import { ElMessage } from 'element-plus';
 import logoicon from '@/assets/logo.ico';
 import pdficon from '@/assets/pdf.svg';
-import pdficon1 from '@/assets/pdf1.svg';
 import markdownicon from '@/assets/markdown.svg';
 import translate from '@/assets/translate.svg';
 import formulaicon from '@/assets/formula.svg';

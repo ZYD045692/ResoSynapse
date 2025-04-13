@@ -260,7 +260,6 @@ const handleLogin = async () => {
       case 2:
         // 登录成功
         ElMessage.success('登录成功！');
-        userStore.setUserId(999)
         const cookies = document.cookie.split(';'); // 将Cookie字符串按分号分割成数组
         const cookieMap = new Map<string, string>();
         cookies.forEach(cookie => {
