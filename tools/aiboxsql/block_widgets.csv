@@ -1,0 +1,16 @@
+id,icon_url,name,display_order
+1,images/置顶网页.svg,置顶网页,1
+2,images/学术GPT.svg,学术GPT,2
+3,images/满血DeepSeek.svg,满血DeepSeek,3
+4,images/中文文献.svg,中文文献,4
+5,images/英文文献.svg,英文文献,5
+6,images/论文写作.svg,论文写作,6
+7,images/检索工具.svg,检索工具,7
+8,images/专利检索.svg,专利检索,8
+9,images/期刊检索.svg,期刊检索,9
+10,images/科研社区.svg,科研社区,10
+11,images/文献管理.svg,文献管理,11
+12,images/论文查重.svg,论文查重,12
+13,images/数据查找.svg,数据查找,13
+14,images/院校相关.svg,院校相关,14
+15,images/摸鱼神器.svg,摸鱼神器,15

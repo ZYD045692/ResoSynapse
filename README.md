@@ -163,7 +163,18 @@ setup.bat
 
 ### 使用注意
 
-修改AITool\src\main\resources\application-prod.yml
+邮箱注册功能需补充backend\Djangobackend\Djangobackend\email.py
+
+```bash
+# SMTP服务器配置常量
+SMTP_SERVER = "smtp.qq.com"
+SMTP_PORT = 587
+SENDER_EMAIL = ""
+SENDER_PASSWORD = ""
+EMAIL_SUBJECT = "验证码邮件"
+```
+
+修改backend\AITool\src\main\resources\application-prod.yml
 
 ```bash
 datasource:
@@ -172,7 +183,7 @@ datasource:
     password: 123456
 ```
 
-修改Djangobackend\settings.py
+修改backend\Djangobackend\settings.py
 
 ```bash
 DATABASES = {
