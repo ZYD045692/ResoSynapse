@@ -21,6 +21,7 @@ from . import pdf
 from . import formula
 from . import text
 from . import email
+from . import mdAIGC
 urlpatterns = [
     path('api/createService/', service.createService, name='createService'),
     path('api/updateService/', service.updateService, name='updateService'),
@@ -37,4 +38,5 @@ urlpatterns = [
     path('api/transformLanguage/', text.transformLanguage, name='transformLanguage'),
     path('api/getEmailCaptcha/', email.getEmailCaptcha, name='getEmailCaptcha'),
     path('api/checkEmailCaptcha/', email.checkEmailCaptcha, name='checkEmailCaptcha'),
+    path('api/mdchat/', mdAIGC.mdchat, name='mdchat'),
 ]

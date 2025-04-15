@@ -211,6 +211,7 @@ const sendMessage = async () => {
   await nextTick();
   scrollToBottom();
 
+  // mock response
   let assistantResponse;
   if (messages.value[messages.value.length - 1].content === "请介绍一下智汇研析") {
     assistantResponse = ResoSynapsexintroduction;
@@ -223,6 +224,8 @@ const sendMessage = async () => {
   } else {
     assistantResponse = generateRandomResponse();
   }
+
+  
 
 
   messages.value.push({ type: 'assistant', content: '', streaming: enableStreaming.value });

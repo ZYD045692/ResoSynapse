@@ -32,7 +32,7 @@ def extract_formulas(text):
 def ocrFormula(request):
     try :
         uploaded_file = request.FILES.get('image')
-        image_path = os.path.join(output_folder, get_unique_filename(output_folder,uploaded_file.name))
+        image_path = os.path.join(output_folder, get_unique_filename(uploaded_file.name))
         with open(image_path, 'wb+') as destination:
             for chunk in uploaded_file.chunks():
                 destination.write(chunk)

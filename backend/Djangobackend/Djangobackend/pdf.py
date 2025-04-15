@@ -10,6 +10,7 @@ from django.core.files.storage import FileSystemStorage
 from django.http import FileResponse
 from django.db import transaction
 from django.http import HttpResponse
+from utils.get_unique_filename import get_unique_filename
 import base64
 output_folder = "tempPng"
 outputpdf_folder = "tempPdf"
@@ -20,15 +21,7 @@ os.makedirs(outputpdf_folder, exist_ok=True)
 os.makedirs(zip_folder, exist_ok=True)
 
 
-def get_unique_filename(folder, filename):
-    """生成唯一的文件名"""
-    base, extension = os.path.splitext(filename)
-    counter = 1
-    unique_filename = filename
-    while os.path.exists(os.path.join(folder, unique_filename)):
-        unique_filename = f"{base}_{counter}{extension}"
-        counter += 1
-    return unique_filename
+
 
 # 将 PDF 转换为图片
 def pdf_to_images(pdf_path):
@@ -37,7 +30,7 @@ def pdf_to_images(pdf_path):
     for page_num in range(len(doc)):
         page = doc.load_page(page_num)
         pix = page.get_pixmap()
-        savePath = os.path.join(output_folder,get_unique_filename(output_folder,f"{page_num}.png"))
+        savePath = os.path.join(output_folder,get_unique_filename(f"{page_num}.png"))
         pathlist.append(savePath)
         pix.save(savePath)
     doc.close()
@@ -54,7 +47,7 @@ def modifyPdf(pdf_name,pngPathList):
         pdf_page = pdf_doc.new_page(width=img_rect.width, height=img_rect.height)
         pdf_page.insert_image(img_rect, filename=path)
 
-    pdfsavePath = os.path.join(outputpdf_folder, get_unique_filename(outputpdf_folder,pdf_name))
+    pdfsavePath = os.path.join(outputpdf_folder, get_unique_filename(pdf_name))
     pdf_doc.save(pdfsavePath)
     pdf_doc.close()
     return pdfsavePath
@@ -70,14 +63,14 @@ def addPage(request):
         fs = FileSystemStorage()
         file_name = uploaded_file.name
         if uploaded_file.name.endswith(".pdf"):
-            file_path = os.path.join(outputpdf_folder,get_unique_filename(outputpdf_folder, file_name))
+            file_path = os.path.join(outputpdf_folder,get_unique_filename(file_name))
             fs.save(file_path, uploaded_file)
             pnglist = pdf_to_images(file_path)
             doc = fitz.open(file_path)
             num = len(doc)
             doc.close()
         else:
-            file_path = os.path.join(output_folder,get_unique_filename(output_folder, file_name))
+            file_path = os.path.join(output_folder,get_unique_filename(file_name))
             fs.save(file_path, uploaded_file)
             pnglist = [file_path]
             num = 1
