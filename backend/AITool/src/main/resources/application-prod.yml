@@ -18,7 +18,7 @@ spring:
     resources:
       static-locations: classpath:/static/, file:${file-upload.location}  # 使用配置的路径
 file-upload:
-  location: ${user.dir}/src/main/webapp/upload
+  location: ${user.dir}/upload
 ip:
   path: http://39.106.153.128:8080/AITool/
 mybatis:

@@ -139,7 +139,7 @@ function performSearch() {
 
 .search-box input {
   position: relative;
-  height: 6vh;
+  height: 4vh;
   width: 74%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -155,7 +155,7 @@ function performSearch() {
   border-bottom-right-radius: 0;
   /* 右边下角直角 */
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   padding-left: 32px;
 }
 

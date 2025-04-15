@@ -260,21 +260,7 @@ const handleLogin = async () => {
       case 2:
         // 登录成功
         ElMessage.success('登录成功！');
-        const cookies = document.cookie.split(';'); // 将Cookie字符串按分号分割成数组
-        const cookieMap = new Map<string, string>();
-        cookies.forEach(cookie => {
-          const [name, value] = cookie.trim().split('='); // 分割 Cookie 的名称和值
-          cookieMap.set(name, value);
-        });
-        if (cookieMap.get('userId')){
-          userStore.setUserId(Number(cookieMap.get('userId'))||999);
-        }
-        if (cookieMap.get('userName')){
-          userStore.setUserName(cookieMap.get('userName')||'');
-        }
-        if (cookieMap.get('profilePhotoUrl')){
-          userStore.setprofilePhotoUrl(cookieMap.get('profilePhotoUrl')||'https://www.keaitupian.cn/cjpic/frombd/2/253/1639036208/3382934126.jpg');
-        }
+        userStore.setUserId(response.data.userId||999);
         back()
         break;
       default:

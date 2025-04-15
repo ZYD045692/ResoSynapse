@@ -8,6 +8,7 @@ import org.amm.model.entity.Admin;
 import org.amm.service.IAdminService;
 import org.amm.service.IUserService;
 
+import org.amm.utils.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,36 +27,27 @@ public class AdminController {
     private IUserService userService;
 
     //登录
-    @RequestMapping(value="/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    public Map login(@RequestBody Admin admin, HttpServletResponse response, HttpSession session) {
-        Map map = new HashMap<String, Object>();
+    public Map<String, Object> login(@RequestBody Admin admin) {
         int stateCode = adminService.login(admin);
+        Map map = new HashMap<String, Object>();
         if (stateCode == 2) {
             Admin adminLogined = adminService.findByAdminName(admin.getAdminName());
-            // 创建Session并存储用户信息
-            session.setAttribute("admin", adminLogined.getAdminName());
-
-            // 创建Cookie
-            Cookie sessionCookie = new Cookie("JSESSIONID", session.getId());
-            Cookie adminIdCookie = new Cookie("adminId", String.valueOf(adminLogined.getAdminId()));
-            Cookie adminNameCookie = new Cookie("adminName", adminLogined.getAdminName());
-
-            response.setHeader("Access-Control-Allow-Origin", "*");
-            response.addCookie(sessionCookie);
-            response.addCookie(adminIdCookie);
-            response.addCookie(adminNameCookie);
-
+            String token = JwtUtils.generateToken(admin.getAdminName());
+            map.put("token", token);
             map.put("stateCode", stateCode);
             map.put("adminId", adminLogined.getAdminId());
             map.put("level", adminLogined.getLevel());
             return map;
         } else {
+            map.put("token", "");
             map.put("stateCode", stateCode);
             map.put("adminId", -1);
             map.put("level", -1);
             return map;
         }
+
     }
 
     // 注册
