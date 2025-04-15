@@ -91,7 +91,7 @@ ResoSynapse/
 ### 环境安装
 
 ```bash
-npm i
+npm install
 ```
 
 ### 启动方法
@@ -161,7 +161,7 @@ ResoSynapse.bat
 setup.bat
 ```
 
-### 使用注意
+## 注意事项
 
 邮箱注册功能需补充backend\Djangobackend\Djangobackend\email.py
 
