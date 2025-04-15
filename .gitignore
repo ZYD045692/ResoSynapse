@@ -14,4 +14,4 @@ backend/Djangobackend/docx/
 **/try/
 
 # 忽略所有以 temp 开头的文件夹及其内容
-temp*/
+**/temp*/
