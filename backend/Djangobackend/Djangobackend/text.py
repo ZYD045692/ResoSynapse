@@ -64,7 +64,7 @@ def transformText(request):
     try:
         file = request.FILES["file"]
         # 保存上传的文件
-        file_path = os.path.join(video_folder, get_unique_filename(video_folder, file.name))
+        file_path = os.path.join(video_folder, get_unique_filename(file.name))
         with open(file_path, 'wb+') as destination:
             for chunk in file.chunks():
                 destination.write(chunk)
