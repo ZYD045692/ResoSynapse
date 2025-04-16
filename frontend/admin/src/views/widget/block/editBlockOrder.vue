@@ -47,6 +47,10 @@
             </div>
 
         </div>
+
+        <div style="margin-top: 16vh" v-if="showEmpty">
+            <el-empty :description="`未找到相关数据 ${EmojiText[0]}`" />
+        </div>
     </div>
 
 </template>
@@ -68,7 +72,9 @@ const isLoading = ref(true)
 onMounted(() => {
     getBlockList()
 })
-
+const showEmpty = computed(() => {
+  return blockList.value.length === 0 && !isLoading.value
+})
 const getBlockList = async () => {
     isLoading.value = true
     // 模拟API调用

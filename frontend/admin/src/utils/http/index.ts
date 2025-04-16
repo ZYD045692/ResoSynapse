@@ -2,7 +2,9 @@ import axios, { InternalAxiosRequestConfig, AxiosRequestConfig, AxiosResponse } 
 import { ElMessage } from 'element-plus'
 import { useUserStore } from '@/store/modules/user'
 import EmojiText from '../emojo'
-
+import { t } from '@wangeditor/editor'
+import {UserService} from '@/api/usersApi'
+import { router } from '@/router'
 const axiosInstance = axios.create({
   timeout: 15000, // 请求超时时间(毫秒)
   baseURL: import.meta.env.VITE_API_URL, // API地址
@@ -15,11 +17,13 @@ const axiosInstance = axios.create({
   },
   transformResponse: [
     (data) => {
-      // 响应数据转换
       try {
-        return typeof data === 'string' && data.startsWith('{') ? JSON.parse(data) : data
+        if (typeof data === 'string' && (data.startsWith('{') || data.startsWith('['))) {
+          return JSON.parse(data);
+        }
+        return data;
       } catch {
-        return data // 解析失败时返回原数据
+        return data;
       }
     }
   ]
@@ -29,12 +33,11 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (request: InternalAxiosRequestConfig) => {
     const { accessToken } = useUserStore()
-
     // 如果 token 存在，则设置请求头
     if (accessToken) {
       request.headers.set({
         'Content-Type': 'application/json',
-        Authorization: accessToken
+        Authorization: `Bearer ${accessToken}` // 添加 Bearer 前缀
       })
     }
 
@@ -48,8 +51,26 @@ axiosInstance.interceptors.request.use(
 
 // 响应拦截器
 axiosInstance.interceptors.response.use(
-  (response: AxiosResponse) => response,
-  (error) => {
+  (response: AxiosResponse) => {
+    return response
+  },
+  async (error) => {
+    const originalRequest = error.config;
+    if (error.response?.status == 401&& !originalRequest._retry){
+      originalRequest._retry = true;
+      const { refreshToken } = useUserStore()
+      const accessToken = await UserService.RefreshAccessToken(refreshToken)
+      if(accessToken != ""){
+        const userStore = useUserStore()
+        userStore.setToken(accessToken)
+        return axiosInstance(originalRequest);
+      }else{
+        localStorage.clear()
+        useUserStore().logOut()
+        router.push('/login')
+        return;
+      }
+    }
     if (axios.isCancel(error)) {
       console.log('repeated request: ' + error.message)
     } else {

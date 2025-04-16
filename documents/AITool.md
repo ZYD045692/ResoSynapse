@@ -79,6 +79,8 @@
     "stateCode": number int,
     "adminId": adminId  int,
     "level": 管理员级别 int   // 暂定太麻烦了
+    "accessToken": string
+    "refreshToken":string
 }
 ```
 

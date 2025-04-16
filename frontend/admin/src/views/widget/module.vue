@@ -21,6 +21,10 @@
                 </el-row>
             </div>
         </div>
+
+        <div style="margin-top: 16vh" v-if="showEmpty">
+            <el-empty :description="`未找到相关数据 ${EmojiText[0]}`" />
+        </div>
     </div>
 </template>
 
@@ -29,10 +33,11 @@ import { BlockType } from '@/api/model/blockModel';
 import { ModuleType } from '@/api/model/moduleModel';
 import { ElMessage } from 'element-plus';
 import { VueDraggable } from 'vue-draggable-plus';
+import EmojiText from '@/utils/emojo'
 import { router } from '@/router';
 import { BlockList } from '@/mock/temp/blockList';
 import { GetAdminBlocks } from '@/api/blockApi'
-import {apiUrls} from '@/api/api'
+import { apiUrls } from '@/api/api'
 import axios from 'axios';
 const blockList = ref<BlockType[]>([]);
 const last_blockList = ref<BlockType[]>([]);
@@ -51,6 +56,9 @@ onMounted(async () => {
     }
 })
 
+const showEmpty = computed(() => {
+  return blockList.value.length === 0 && !isLoading.value
+})
 const toDetail = (item: ModuleType) => {
     router.push({
         path: `/widget/module/detail`,
@@ -122,10 +130,10 @@ const onRemove = (event: any) => {
     // if (ChangeBlock.added !== null && ChangeBlock.removed !== null) {
     //     //
     // }
-    const changedModules: Array<{ 
-        id: number; 
-        displayOrder: number; 
-        fatherId: number 
+    const changedModules: Array<{
+        id: number;
+        displayOrder: number;
+        fatherId: number
     }> = [];
     blockList.value.forEach((block) => {
         block.moduleList.forEach((module, index) => {
@@ -142,15 +150,15 @@ const onRemove = (event: any) => {
     console.log(changedModules)
     console.log(blockList.value)
     last_blockList.value = blockList.value
-    const response = axios.post(apiUrls.PostUpdateModuleOrder_API_URL,changedModules)
+    const response = axios.post(apiUrls.PostUpdateModuleOrder_API_URL, changedModules)
 };
 
 // 拖拽更新事件（组内）
 const onUpdate = (event: any) => {
-    const changedModules: Array<{ 
-        id: number; 
-        displayOrder: number; 
-        fatherId: number 
+    const changedModules: Array<{
+        id: number;
+        displayOrder: number;
+        fatherId: number
     }> = [];
     blockList.value.forEach((block) => {
         block.moduleList.forEach((module, index) => {
@@ -165,7 +173,7 @@ const onUpdate = (event: any) => {
         });
     });
     console.log('onUpdate', changedModules);
-    const response = axios.post(apiUrls.PostUpdateModuleOrder_API_URL,changedModules)
+    const response = axios.post(apiUrls.PostUpdateModuleOrder_API_URL, changedModules)
 };
 </script>
 

@@ -4,30 +4,61 @@ import { SystemInfo } from '@/config/setting'
 import { BaseResult } from '@/types/axios'
 import { UserInfo } from '@/types/store'
 import avatar from '@imgs/user/avatar.jpg'
+import { AdminLoginType } from '@/api/model/adminLoginModel'
+import axios from 'axios'
+import { apiUrls } from './api'
+import api from '@/utils/http/index'
+import { c } from 'vite/dist/node/moduleRunnerTransport.d-CXw_Ws6P'
 
+interface RefreshTokenResponse {
+  stateCode: number;
+  accessToken?: string;
+}
 export class UserService {
   // 模拟登录接口
-  static login(options: { body: string }): Promise<BaseResult> {
-    return new Promise((resolve) => {
-      const { username, password } = JSON.parse(options.body)
+  static async login(username: string, password: string): Promise<BaseResult> {
+    return new Promise(async (resolve) => {
 
-      if (username === SystemInfo.login.username && password === SystemInfo.login.password) {
+      const response = await api.post<AdminLoginType>({
+        url: apiUrls.AdminLogin_API_URL,
+        data: {
+          adminName: username,
+          adminPasswordHash: password
+        }
+      });
+      if (response) {
         resolve({
           code: 200,
           message: '登录成功',
-          data: {
-            accessToken:
-              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gU25vdyIsImlhdCI6MTcwNjg2NTYwMCwiZXhwIjoxNzA2OTUyMDAwfQ.8f9D4kJ2m3XlH5Q0y6Z1r2Y3n4X5pL6q8K9v2W3n4X5'
-          }
-        })
+          data: response
+        });
       } else {
         resolve({
           code: 401,
           message: '用户名或密码错误',
           data: null
-        })
+        });
       }
-    })
+    });
+  }
+
+  // 刷新Token
+  static async RefreshAccessToken(refreshToken: string): Promise<string> {
+    try {
+      const response = await api.post<RefreshTokenResponse>({
+        url: apiUrls.Admin_Refresh_Token_API_URL,
+        data: {
+          refreshToken: refreshToken,
+        }
+      });
+      if (response.stateCode !== 1) {
+        return "";
+      }else{
+        return response.accessToken||"";
+      }
+    } catch (error) {
+      return "";
+    }
   }
 
   // 获取用户信息

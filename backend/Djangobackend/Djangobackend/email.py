@@ -9,14 +9,14 @@ from django.utils import timezone
 from datetime import timedelta
 import json
 from utils.sent import send_email
-
+from utils.config import SMTP_PORT, SENDER_EMAIL,SENDER_PASSWORD
 @csrf_exempt
 def getEmailCaptcha(request):
     # SMTP服务器配置常量
     SMTP_SERVER = "smtp.qq.com"
-    SMTP_PORT = 587
-    SENDER_EMAIL = "2214845593@qq.com"
-    SENDER_PASSWORD = "lcwldryyxddqdhgf"
+    SMTP_PORT_ = SMTP_PORT
+    SENDER_EMAIL_ = SENDER_EMAIL
+    SENDER_PASSWORD_ = SENDER_PASSWORD
     EMAIL_SUBJECT = "验证码邮件"
     print(dict(request.session))
     try:
@@ -39,9 +39,9 @@ def getEmailCaptcha(request):
         # 发送邮件
         send_success = send_email(
             SMTP_SERVER,
-            SMTP_PORT,
-            SENDER_EMAIL,
-            SENDER_PASSWORD,
+            SMTP_PORT_,
+            SENDER_EMAIL_,
+            SENDER_PASSWORD_,
             email,  # 直接使用email变量作为接收者
             EMAIL_SUBJECT,
             formatted_number

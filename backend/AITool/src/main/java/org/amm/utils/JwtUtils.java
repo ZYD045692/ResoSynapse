@@ -10,9 +10,9 @@ import java.util.Date;
 
 public class JwtUtils {
     private static final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-    private static final long EXPIRATION_TIME = 86_400_000; // 1 day
 
-    public static String generateToken(String userName) {
+    public static String generateToken(String userName,
+                                       long EXPIRATION_TIME) {
         return Jwts.builder()
                 .setSubject(userName)
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))

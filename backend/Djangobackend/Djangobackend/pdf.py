@@ -3,6 +3,7 @@ from .models import Service, File
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 import json
+
 import os
 import fitz  # PyMuPDF
 import zipfile
@@ -12,9 +13,10 @@ from django.db import transaction
 from django.http import HttpResponse
 from utils.get_unique_filename import get_unique_filename
 import base64
-output_folder = "tempPng"
-outputpdf_folder = "tempPdf"
-zip_folder = "tempZip"
+from utils.config import PNG_DIR,PDF_DIR,ZIP_DIR
+output_folder = PNG_DIR
+outputpdf_folder = PDF_DIR
+zip_folder = ZIP_DIR
 # 确保输出文件夹存在
 os.makedirs(output_folder, exist_ok=True)
 os.makedirs(outputpdf_folder, exist_ok=True)

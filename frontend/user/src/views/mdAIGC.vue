@@ -142,7 +142,8 @@ import { Promotion, Link, ChatDotRound, ChatLineRound, Close, CopyDocument, Refr
 import { ElMessage } from 'element-plus';
 import markdown from './markdown.vue';
 import { ResoSynapsexintroduction, ResoSynapsexmind, ResoSynapsexintroduction1 } from '@/mock/temp/ResoSynapse';
-
+import { apiUrls } from '@/api/api';
+import axios from 'axios';
 // Constants
 // const USER_AVATAR = 'https://tse4-mm.cn.bing.net/th/id/OIP-C.g5M-iZUiocFCi9YAzojtRAAAAA?rs=1&pid=ImgDetMain';
 const USER_AVATAR = './src/assets/avatar.jpg';
@@ -205,29 +206,60 @@ const sendMessage = async () => {
     content: inputMessage.value,
     files: [...fileList.value]
   });
-  inputMessage.value = '';
-  fileList.value = [];
+  
 
   await nextTick();
   scrollToBottom();
 
+  let assistantResponse = '服务器繁忙，请稍后再试。';
   // mock response
-  let assistantResponse;
-  if (messages.value[messages.value.length - 1].content === "请介绍一下智汇研析") {
-    assistantResponse = ResoSynapsexintroduction;
-  } else if (messages.value[messages.value.length - 1].content === "请结合文档介绍一下智汇研析") {
-    // 使用 setTimeout 实现10秒延迟
-    setTimeout(() => {
-    initValue.value = ResoSynapsexmind;
-    }, 50000); // 10000毫秒 = 10秒
-    assistantResponse = ResoSynapsexintroduction1;
-  } else {
-    assistantResponse = generateRandomResponse();
+  // if (messages.value[messages.value.length - 1].content === "请介绍一下智汇研析") {
+  //   assistantResponse = ResoSynapsexintroduction;
+  // } else if (messages.value[messages.value.length - 1].content === "请结合文档介绍一下智汇研析") {
+  //   // 使用 setTimeout 实现10秒延迟
+  //   setTimeout(() => {
+  //   initValue.value = ResoSynapsexmind;
+  //   }, 50000); // 10000毫秒 = 10秒
+  //   assistantResponse = ResoSynapsexintroduction1;
+  // } else {
+  //   assistantResponse = generateRandomResponse();
+  // }
+
+
+  const formData = new FormData();
+  formData.append('text', inputMessage.value);
+  if (fileList.value instanceof File) {
+    formData.append('files', fileList.value);
   }
+  inputMessage.value = '';
+  fileList.value = [];
 
-  
 
-
+  await axios.post(apiUrls.MDAIGC_API_URL, formData, {
+  headers: {
+    'Content-Type': 'multipart/form-data',
+  },
+  }).then((response) => {
+    if(response.status == 200) {
+      if (response.data.content){
+        assistantResponse = response.data.content;
+      }
+      if (response.data.markdown){
+        initValue.value = response.data.markdown;
+        mm.value?.fit();
+      }
+      else{
+        initValue.value = ResoSynapsexmind;
+        mm.value?.fit();
+      }
+    }
+    else {
+      return;
+    }
+  }).catch((error) => {
+    console.error('Error:', error);
+    return;
+  });
   messages.value.push({ type: 'assistant', content: '', streaming: enableStreaming.value });
 
   // Create new abort controller for this streaming session
@@ -242,7 +274,9 @@ const sendMessage = async () => {
         }
 
         await new Promise(resolve => setTimeout(resolve, 30));
-        messages.value[messages.value.length - 1].content += assistantResponse[i];
+        if (assistantResponse) {
+          messages.value[messages.value.length - 1].content += assistantResponse[i];
+        }
         await nextTick();
         scrollToBottom();
       }

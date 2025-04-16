@@ -12,8 +12,8 @@ public class FilterConfig {
     public FilterRegistrationBean<JwtFilter> jwtFilterRegistration(JwtFilter filter) {
         FilterRegistrationBean<JwtFilter> registrationBean = new FilterRegistrationBean<>();
         registrationBean.setFilter(filter);
-        registrationBean.addUrlPatterns("/admin1/*");
-        registrationBean.addUrlPatterns("/adminPage1/*");
+        registrationBean.addUrlPatterns("/admin/*");
+        registrationBean.addUrlPatterns("/adminPage/*");
         registrationBean.setOrder(Ordered.HIGHEST_PRECEDENCE); // 高优先级
         return registrationBean;
     }

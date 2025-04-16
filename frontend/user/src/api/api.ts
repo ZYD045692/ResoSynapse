@@ -17,5 +17,6 @@ const apiUrls = {
     DownloadPdf_API_URL:baseUrl2+'api/downloadPdf/',
     DownloadImages_API_URL:baseUrl2+'api/downloadImages/',
     MovePage_API_URL:baseUrl2+'api/movePage/',
+    MDAIGC_API_URL:baseUrl2+"api/mdchat/",
 }
 export {apiUrls}

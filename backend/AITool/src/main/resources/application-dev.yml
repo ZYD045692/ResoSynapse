@@ -19,10 +19,8 @@ spring:
   web:
     resources:
       static-locations: classpath:/static/, file:${file-upload.location}/**
-
 ip:
   path: http://localhost:8080
-#  path: http://115.190.75.15:8080
 
 
 file-upload:

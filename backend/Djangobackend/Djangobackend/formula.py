@@ -8,9 +8,9 @@ import base64
 from openai import OpenAI
 import re
 from latex2mathml.exceptions import NoAvailableTokensError
-
+from utils.config import KIMI_API_KEY
 client = OpenAI(
-    api_key = "sk-gfSJSPrWD6zHx50yDsSzNho37CrIKvf6GWFY9ug5FH9knw08",
+    api_key = KIMI_API_KEY,
     base_url = "https://api.moonshot.cn/v1",
 )
 
@@ -39,6 +39,7 @@ def ocrFormula(request):
         # 对图片进行base64编码
         with open(image_path, 'rb') as f:
             img_base = base64.b64encode(f.read()).decode('utf-8')
+        os.remove(image_path)
         
         response = client.chat.completions.create(
         model="moonshot-v1-8k-vision-preview", 

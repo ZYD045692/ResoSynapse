@@ -7,5 +7,6 @@ const apiUrls = {
     PostUpdateModuleOrder_API_URL:baseUrl1 + 'adminPage/updateModuleOrder',
     Get_Page_Info_API_URL:baseUrl1 + 'userPage/getUserHomePageInfo',
     AdminLogin_API_URL: baseUrl1 + 'admin/login',
+    Admin_Refresh_Token_API_URL: baseUrl1 + 'admin/refresh',
 }
 export {apiUrls};

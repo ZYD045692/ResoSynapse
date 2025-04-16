@@ -9,10 +9,11 @@ from pix2text import Pix2Text
 from Djangobackend.pdf import get_unique_filename
 import json
 from langdetect import detect
+from utils.config import PNG_DIR,VIDEO_DIR
 # 初始化 Pix2Text 对象
 
-png_folder = "tempPng"
-video_folder = "tempVideo"
+png_folder = PNG_DIR
+video_folder = VIDEO_DIR
 os.makedirs(png_folder, exist_ok=True)
 os.makedirs(video_folder, exist_ok=True)
 

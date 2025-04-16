@@ -112,7 +112,6 @@ onMounted(async () => {
     const Blocks = await GetAdminBlocks(1)
     blockList.value = Blocks
     oriBlockList.value = Blocks
-    console.log(oriBlockList)
   } catch (error) {
     console.error('获取板块列表失败:', error)
   } finally {
