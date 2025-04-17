@@ -228,12 +228,11 @@ const sendMessage = async () => {
 
   const formData = new FormData();
   formData.append('text', inputMessage.value);
-  if (fileList.value instanceof File) {
-    formData.append('files', fileList.value);
-  }
+  fileList.value.forEach((file) => {
+    formData.append('files', file.raw!);
+  });
   inputMessage.value = '';
   fileList.value = [];
-
 
   await axios.post(apiUrls.MDAIGC_API_URL, formData, {
   headers: {
@@ -241,9 +240,6 @@ const sendMessage = async () => {
   },
   }).then((response) => {
     if(response.status == 200) {
-      if (response.data.content){
-        assistantResponse = response.data.content;
-      }
       if (response.data.markdown){
         initValue.value = response.data.markdown;
         mm.value?.fit();
@@ -251,6 +247,9 @@ const sendMessage = async () => {
       else{
         initValue.value = ResoSynapsexmind;
         mm.value?.fit();
+      }
+      if (response.data.content){
+        assistantResponse = response.data.content;
       }
     }
     else {

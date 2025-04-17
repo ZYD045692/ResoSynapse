@@ -8,9 +8,9 @@ import base64
 from openai import OpenAI
 import re
 from latex2mathml.exceptions import NoAvailableTokensError
-from utils.config import KIMI_API_KEY
+from utils.config import KIMI_API_KEY_LIST
 client = OpenAI(
-    api_key = KIMI_API_KEY,
+    api_key = KIMI_API_KEY_LIST[0],
     base_url = "https://api.moonshot.cn/v1",
 )
 
