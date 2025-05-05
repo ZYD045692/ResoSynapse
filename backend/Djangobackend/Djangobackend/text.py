@@ -9,7 +9,7 @@ from pix2text import Pix2Text
 from Djangobackend.pdf import get_unique_filename
 import json
 from langdetect import detect
-from utils.config import PNG_DIR,VIDEO_DIR
+from utils.config import PNG_DIR,VIDEO_DIR,FFMPEG_DIR
 # 初始化 Pix2Text 对象
 
 png_folder = PNG_DIR
@@ -45,7 +45,7 @@ def transText(translated_text,from_language,to_language):
 def convert_mp4_to_mp3(mp4_path, mp3_path):
         # 构造 ffmpeg 命令
     command = [
-        r"D:\ffmpeg_full_build\bin\ffmpeg.exe",  # 调用 ffmpeg
+        FFMPEG_DIR,  # 调用 ffmpeg
         "-i", mp4_path,  # 输入文件路径
         "-vn",  # 不包含视频流
         "-ar", "44100",  # 音频采样率

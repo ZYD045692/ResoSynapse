@@ -56,7 +56,7 @@ export const ResoSynapsexmind=`
 
 ### 公式提取
 
-- **图片OCR**：用户上传图片，系统识别其中的公式等内容，返回LaTex格式的文本。
+- **图片OCR**：用户上传图片，系统识别其中的公式等内容，返回MathMl或LaTex格式的文本。
 
 ### 文本提取与翻译
 

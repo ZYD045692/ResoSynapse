@@ -61,7 +61,7 @@ onBeforeUnmount(() => {
 }
 
 .date {
-  font-size: 18px;
+  font-size: 24px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #ffffff;
   margin-bottom: 5px;
@@ -72,7 +72,7 @@ onBeforeUnmount(() => {
 }
 
 .time {
-  font-size: 30px;
+  font-size: 36px;
   font-family: DS-Digital;
   font-weight: bold;
   color: #ffffff;

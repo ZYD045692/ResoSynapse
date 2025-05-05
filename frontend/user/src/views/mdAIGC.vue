@@ -362,7 +362,7 @@ const handleResize = (e: MouseEvent) => {
   const containerWidth = document.querySelector('.el-container')?.clientWidth || 0;
   const newWidth = startWidth.value + (diff / containerWidth) * 100;
 
-  asideWidth.value = Math.min(Math.max(newWidth, 20), 65);
+  asideWidth.value = Math.min(Math.max(newWidth, 40), 65);
 };
 
 const stopResize = () => {
@@ -562,13 +562,15 @@ const truncateFileName = (filename: string): string => {
 .message.user .bubble {
   background: linear-gradient(135deg, #409eff 0%, #3a8ee6 100%);
   color: white;
-  border-bottom-right-radius: 4px;
+  /* border-bottom-right-radius: 4px; */
+  border-radius: 10px;
 }
 
 .message.assistant .bubble {
   background: white;
   color: #303133;
-  border-bottom-left-radius: 4px;
+  /* border-bottom-left-radius: 4px; */
+  border-radius: 10px;
 }
 
 /* Streaming Content */

@@ -10,6 +10,7 @@ from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from utils.get_unique_filename import get_unique_filename
 from utils.config import KIMI_API_KEY_LIST,MD_AIGC_DIR
+from utils.ResoSynapse import *
 os.makedirs(MD_AIGC_DIR, exist_ok=True)
 # 自定义支持多文件上传的Widget
 class MultipleFileInput(forms.FileInput):
@@ -154,6 +155,10 @@ def mdchat(request):
         for file in fileList:
             os.remove(file)
         text = form.cleaned_data['text']
+
+        if "智汇研析" in text or "ResoSynapse" in text:
+            return JsonResponse({"content": ResoSynapsexintroduction,"markdown": ResoSynapsexmind})
+
         messages = [
             # 我们使用 * 语法，来解构 file_messages 消息，使其成为 messages 列表的前 N 条 messages。
             *file_messages,

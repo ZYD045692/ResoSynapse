@@ -71,7 +71,7 @@ function navigateTo(url: string, widget_id: number) {
 
 <style scoped>
 .block-list {
-  width: 80%;
+  width: 80vw;
   margin: 0 auto;
   padding: 20px;
   display: flex;

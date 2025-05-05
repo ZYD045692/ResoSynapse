@@ -9,7 +9,7 @@
     </div>
     <div class="search-box">
       <input type="text" :placeholder="selectedPlatformHint" v-model="searchQuery" />
-      <button style="min-width: 60px;" @click="performSearch">
+      <button @click="performSearch">
         <svg t="1740868302686" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
           p-id="18908" width="24" height="24">
           <path
@@ -79,8 +79,19 @@ function performSearch() {
 
 <style scoped>
 .search-section {
-  padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  display: flex;
+  width: 80vw;
+  height: 4vh;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .search-buttons {
@@ -110,8 +121,9 @@ function performSearch() {
   font-size: 14px;
   /* 调小字体大小 */
   font-weight: bold;
-  color: #333;
   /* 设置文字颜色为黑色 */
+  color: #333;
+
 }
 
 .search-buttons button.active {
@@ -131,17 +143,18 @@ function performSearch() {
 
 .search-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  width: 80vw;
+  height: 7vh;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .search-box input {
-  position: relative;
-  height: 4vh;
-  width: 74%;
-  padding: 10px;
+  display: flex;
+  width: 95%;
+  height: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
   border: 1px solid #ccc;
   background-color: rgba(255, 255, 255, 0.8);
   border-right: none;
@@ -156,7 +169,6 @@ function performSearch() {
   /* 右边下角直角 */
   font-size: 16px;
   font-weight: normal;
-  padding-left: 32px;
 }
 
 .search-box input:focus {
@@ -167,21 +179,20 @@ function performSearch() {
 }
 
 .search-box button {
-  position: relative;
+  display: flex;
   width: 5%;
-  height: 6vh;
+  height: 100%;
   padding: 10px 16px;
+  box-sizing: border-box;
   border: 1px solid #4465d6;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-left: none;
-  /* 移除左侧边框 */
   border-top-left-radius: 0;
-  /* 左上角直角 */
   border-bottom-left-radius: 0;
-  /* 左下角直角 */
   border-top-right-radius: 10px;
-  /* 右上角圆角 */
   border-bottom-right-radius: 10px;
-  /* 右下角圆角 */
   background-color: #4465d6;
   color: #ffffff;
   cursor: pointer;

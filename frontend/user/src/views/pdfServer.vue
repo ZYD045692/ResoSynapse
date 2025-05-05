@@ -369,7 +369,7 @@ const deleteImage = async (serviceId: number, positionIndex: number) => {
 
 const handleFileUpload = (
   file: File,
-  serviceId: number | undefined,   // 推荐小驼峰命名
+  serviceId: number | undefined,
   positionIndex: number | undefined
 ) => {
   const formData = new FormData();
