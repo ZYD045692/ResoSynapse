@@ -34,7 +34,7 @@ ResoSynapse/
 
   * 可通过侧边栏快速跳转对应模块
 
-  ![siderbar](.\images\siderbar.jpg)
+  ![siderbar](.\images\leadSiderbar.jpg)
 
 - 板块展示：按设定顺序展示各类资源板块，支持响应式布局  
   - 一行 8 个  
